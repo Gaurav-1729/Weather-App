@@ -1,0 +1,95 @@
+:root{
+  --section-overlay:rgba(0,0,0,0.7);
+  --background-overlay:rgba(0,0,0,0.15);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* https://dev.to/zachsnoek/understanding-box-sizing-in-css-28bk */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.app{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  /* https://www.w3schools.com/cssref/css3_pr_background-size.php */
+}
+.overlay{
+  width: 100%;height: 100vh;
+  background-color: var(--background-overlay);
+}
+.container{
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.section{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: whitesmoke;
+}
+.section_inputs, .section_temperature{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--section-overlay);
+}
+
+.section_inputs input{
+  border: 1px solid whitesmoke;
+  border-radius: 0.6rem;
+  padding: 2px 7px;
+  align-items: center;
+  outline: none;
+  font-size: 20px;
+  background-color: transparent;
+  color: whitesmoke;
+  font-weight: 100;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus */
+
+.section_inputs button{
+  padding: 2px 25px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.section_inputs button:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-right: 50px;
+  border-right: 50px;
+}
+
+.icon h3{
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.temperature h1{
+  font-size: 45px;
+  font-weight: bold;
+}
